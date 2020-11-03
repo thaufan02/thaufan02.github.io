@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 05211942000004/Thaufan Rezhqy Aqhbar </title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <script> 
+      $(document).ready(function() { $('.error').hide(); $('.submit').click(function(event){// for the document
+var data=$('.infobox').val(); if(validate_userid(data))
+{
+$('.error').hide(); } //error is hiding
+else {
+$('.error').show(); //error is showing
+event.preventDefault(); }
+}); });
+function validate_userid(uid)
+{
+var pattern= new RegExp(/^[a-z0-9_]+$/);
+return pattern.test(uid); }
+  </script>
+
+<body>
+    <form id="signup" method="post" action="">
+    <div><span class="label">Enter User id </span><input type="text"  class="infobox"
+    name="userid" /><span class="error"> User id can contain only letters, numbers or
+    underscore</span></div>
+    <input class="submit" type="submit" value="Submit">
+    </form>
+    </body>
+
